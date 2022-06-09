@@ -32,12 +32,19 @@ struct UserDetailView: View {
     /// List of posts
     private var listOfPosts: some View {
         List {
-            ForEach(viewModel.listOfPosts) { post in
-                PostCellView(post: post)
+            Section {
+                ForEach(viewModel.listOfPosts) { post in
+                    PostCellView(post: post)
+                }
+            } header: {
+                Text("Posts")
+                    .foregroundColor(.black)
+                    .font(.headline)
+                    
             }
         }
         .listStyle(.plain)
-        .navigationTitle("\(viewModel.user.name)")
+        .navigationTitle("\(viewModel.user.name ?? "")")
         .navigationBarTitleDisplayMode(.inline)
     }
 }

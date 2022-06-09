@@ -54,7 +54,7 @@ struct UserCellView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text(user.name)
+            Text(user.name ?? "")
                 .font(.headline)
             Text(user.email)
                 .foregroundColor(.gray)

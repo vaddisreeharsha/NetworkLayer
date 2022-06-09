@@ -12,9 +12,9 @@ struct User: Codable, Identifiable {
     /// User Id
     let id: Int
     /// Name of User
-    let name: String
+    let name: String?
     /// user name
-    let username: String
+    let username: String?
     /// Email-id
     let email: String
     /// Company
