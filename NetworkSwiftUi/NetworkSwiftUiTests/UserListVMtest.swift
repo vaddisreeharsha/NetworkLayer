@@ -30,7 +30,7 @@ class UserListVMtest: XCTestCase {
         XCTAssertNotNil(user1.company)
         XCTAssertNil(viewModel?.errorMessage)
     }
-    
+
     func testFetchUsersFailureResponse() throws {
         configureMockService(withError: true)
         let exp = expectation(description: "SUCCESS")
@@ -40,7 +40,7 @@ class UserListVMtest: XCTestCase {
         }
         waitForExpectations(timeout: 3)
         let listOfUsers = try XCTUnwrap(viewModel?.listOfUsers)
-        let errorMessage  = try XCTUnwrap(viewModel?.errorMessage)
+        let errorMessage = try XCTUnwrap(viewModel?.errorMessage)
         XCTAssertEqual(listOfUsers.count, 0)
         XCTAssertNotNil(errorMessage)
     }

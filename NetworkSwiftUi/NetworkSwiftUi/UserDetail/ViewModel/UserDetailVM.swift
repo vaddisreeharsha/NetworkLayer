@@ -9,6 +9,8 @@ import Foundation
 
 /// User Detail View model
 class UserDetailVM: ObservableObject {
+    // MARK: - Properties
+
     /// list of posts
     @Published var listOfPosts: [Post] = []
     /// `isLoading` : for progress view . If it is `true` then shows progress view other shows content
@@ -20,12 +22,16 @@ class UserDetailVM: ObservableObject {
     /// post service : Helps to communicate with network layer
     var postService: PostServicePotocol
 
+    // MARK: - Initializer
+
     /// Initializer with dependency injection of postservice and selected user
     init(user: User, postService: PostServicePotocol = PostService()) {
         self.user = user
         self.postService = postService
         fetchPosts(userId: self.user.id)
     }
+
+    // MARK: - Methods
 
     /// fetch posts by selected user
     func fetchPosts(userId _: Int) {

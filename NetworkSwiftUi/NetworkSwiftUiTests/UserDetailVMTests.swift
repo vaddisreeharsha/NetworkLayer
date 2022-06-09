@@ -23,6 +23,8 @@ class UserDetailVMTests: XCTestCase {
         viewModel = UserDetailVM(user: user, postService: mockservice)
     }
 
+    // MARK: - Api test case methods
+
     func testFetchPostsSuccessResponse() throws {
         configureMockService()
         let exp = expectation(description: "SUCCESS")
@@ -52,6 +54,8 @@ class UserDetailVMTests: XCTestCase {
         XCTAssertEqual(listOfPosts.count, 0)
         XCTAssertNotNil(errorMessage)
     }
+
+    // MARK: - URL test case methods
 
     func testInvalidUrl() {
         let apiService = ApiService()

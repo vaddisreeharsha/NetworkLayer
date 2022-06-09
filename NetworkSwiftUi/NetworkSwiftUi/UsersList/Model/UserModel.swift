@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - User
+
 /// User Model
 struct User: Codable, Identifiable {
     /// User Id
@@ -20,6 +22,8 @@ struct User: Codable, Identifiable {
     /// Company
     let company: Company?
 }
+
+// MARK: - Company
 
 /// Company Model
 struct Company: Codable {

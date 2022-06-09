@@ -9,6 +9,8 @@ import Foundation
 
 /// UserList View model
 class UserListVM: ObservableObject {
+    // MARK: - Properties
+
     /// list of users
     @Published var listOfUsers: [User] = []
     /// `isLoading` : for progress view . If it is `true` then shows progress view other shows content
@@ -18,11 +20,15 @@ class UserListVM: ObservableObject {
     /// user service : Helps to communicate with network layer
     private let userService: UserServicePotocol
 
+    // MARK: - Initializer
+
     /// Initializer with dependency injection of userservice
     init(userService: UserServicePotocol = UserService()) {
         self.userService = userService
         fetchUsers()
     }
+
+    // MARK: - Methods
 
     /// Fetch users
     func fetchUsers() {

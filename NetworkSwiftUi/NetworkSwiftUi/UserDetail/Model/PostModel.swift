@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - Post
+
 /// Post Model
 struct Post: Codable, Identifiable {
     /// UserId

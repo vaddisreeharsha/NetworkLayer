@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - User List
+
 /// User List View
 struct UserListView: View {
     /// View model object
@@ -46,6 +48,8 @@ struct UserListView: View {
         .navigationTitle("Users")
     }
 }
+
+// MARK: - User Cell
 
 /// User cell view
 struct UserCellView: View {

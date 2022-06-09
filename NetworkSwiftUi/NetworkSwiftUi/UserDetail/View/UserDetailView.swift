@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - User detail View
+
 /// User detail View
 struct UserDetailView: View {
     /// View model
@@ -38,6 +40,7 @@ struct UserDetailView: View {
                 }
             } header: {
                 Text("Posts")
+                    .foregroundColor(.black)
                     .font(.headline)
             }
         }
@@ -46,6 +49,8 @@ struct UserDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
     }
 }
+
+// MARK: - Post Cell
 
 /// Post cell view
 struct PostCellView: View {
