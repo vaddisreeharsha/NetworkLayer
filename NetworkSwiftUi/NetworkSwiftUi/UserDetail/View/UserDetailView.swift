@@ -38,9 +38,7 @@ struct UserDetailView: View {
                 }
             } header: {
                 Text("Posts")
-                    .foregroundColor(.black)
                     .font(.headline)
-                    
             }
         }
         .listStyle(.plain)
